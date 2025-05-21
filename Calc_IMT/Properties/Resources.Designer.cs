@@ -63,6 +63,26 @@ namespace Calc_IMT.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3317 {
+            get {
+                object obj = ResourceManager.GetObject("3317", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_athlete_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-athlete-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_сгибания_с_гантелями_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-сгибания-с-гантелями-80", resourceCulture);

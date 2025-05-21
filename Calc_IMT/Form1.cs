@@ -16,5 +16,20 @@ namespace Calc_IMT
         {
             InitializeComponent();
         }
+
+        private void Calculate_Click(object sender, EventArgs e)
+        {
+            Data.IMT = Math.Round(Convert.ToDouble(WeightTextBox.Text.Trim()) / Math.Pow(Convert.ToDouble(HeightTextBox.Text.Trim()) / 100, 2), 1);
+            if (Male.Checked)
+            {
+                Data.Gender = "Male";
+            } else
+            {
+                Data.Gender = "Female";
+            }
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
 }

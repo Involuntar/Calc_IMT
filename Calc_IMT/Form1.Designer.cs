@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Gender = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.Male = new System.Windows.Forms.RadioButton();
+            this.Female = new System.Windows.Forms.RadioButton();
             this.HeightLabel = new System.Windows.Forms.Label();
             this.WeightLabel = new System.Windows.Forms.Label();
             this.Calculate = new System.Windows.Forms.Button();
@@ -43,37 +43,37 @@
             // Gender
             // 
             this.Gender.BackColor = System.Drawing.Color.Transparent;
-            this.Gender.Controls.Add(this.radioButton1);
-            this.Gender.Controls.Add(this.radioButton2);
+            this.Gender.Controls.Add(this.Male);
+            this.Gender.Controls.Add(this.Female);
             this.Gender.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Gender.Location = new System.Drawing.Point(28, 245);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(163, 83);
+            this.Gender.Size = new System.Drawing.Size(198, 83);
             this.Gender.TabIndex = 13;
             this.Gender.TabStop = false;
             this.Gender.Text = "Пол";
             // 
-            // radioButton1
+            // Male
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 39);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 38);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "М";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Male.AutoSize = true;
+            this.Male.Checked = true;
+            this.Male.Location = new System.Drawing.Point(12, 39);
+            this.Male.Name = "Male";
+            this.Male.Size = new System.Drawing.Size(52, 38);
+            this.Male.TabIndex = 2;
+            this.Male.TabStop = true;
+            this.Male.Text = "М";
+            this.Male.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // Female
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(104, 39);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 38);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ж";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Female.AutoSize = true;
+            this.Female.Location = new System.Drawing.Point(139, 39);
+            this.Female.Name = "Female";
+            this.Female.Size = new System.Drawing.Size(53, 38);
+            this.Female.TabIndex = 3;
+            this.Female.Text = "Ж";
+            this.Female.UseVisualStyleBackColor = true;
             // 
             // HeightLabel
             // 
@@ -110,6 +110,7 @@
             this.Calculate.TabIndex = 10;
             this.Calculate.Text = "Рассчитать";
             this.Calculate.UseVisualStyleBackColor = false;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
             // HeightTextBox
             // 
@@ -131,8 +132,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(392, 450);
+            this.BackgroundImage = global::Calc_IMT.Properties.Resources._3317;
+            this.ClientSize = new System.Drawing.Size(344, 441);
             this.Controls.Add(this.Gender);
             this.Controls.Add(this.HeightLabel);
             this.Controls.Add(this.WeightLabel);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.WeightTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Калькулятор ИМТ";
             this.Gender.ResumeLayout(false);
             this.Gender.PerformLayout();
@@ -152,8 +154,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox Gender;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton Male;
+        private System.Windows.Forms.RadioButton Female;
         private System.Windows.Forms.Label HeightLabel;
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Button Calculate;
